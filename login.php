@@ -1,19 +1,42 @@
+<?php
+    $message = "";
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
-    <form>
+    <form action="enter.php" method="post">
         Username:<br>
-        <input type="text" name="username"><br>
+        <input type="text" name="username">
+        <span></span>
+        <br>
+
         Password:<br>
-        <input type="text" name="password"><br>
+        <input type="password" name="password">
+
+        <br>
+        <input type="submit" name="submit" value="submit">
+
+        <?php
+
+        if($_GET){
+            if($_GET['message']){
+                $message = $_GET['message'];
+                echo $message;
+            }
+        }
+            
+            
+            
+        ?>
+
     </form>
 </body>
 </html>
