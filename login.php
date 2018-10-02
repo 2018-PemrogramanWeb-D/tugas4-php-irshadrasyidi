@@ -7,36 +7,38 @@
 <head>
     <meta charset="utf-8" />
     <title>Login Page</title>
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <form action="enter.php" method="post">
-        Username:<br>
-        <input type="text" name="username">
-        <span></span>
-        <br>
+    <div class="jumbotron text-center">
+        <h1>Tugas 4 PHP</h1>
+    </div>
+    <div class="container">
+        <form action="enter.php" method="post">
+            <div class="form-group">
+                Username:<br>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <br>
 
-        Password:<br>
-        <input type="password" name="password">
+            <div class="form-group">
+                Password:<br>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <br>
+            <input type="submit" class="btn btn-primary btn-lg" name="submit" value="submit">
 
-        <br>
-        <input type="submit" name="submit" value="submit">
-
-        <?php
-
-        if($_GET){
-            if($_GET['message']){
-                $message = $_GET['message'];
-                echo $message;
+            <?php
+            if($_GET){
+                if($_GET['message']){
+                    $message = $_GET['message'];
+                    echo $message;
+                    echo "<br><i>try pwebd and pehape";
+                }
             }
-        }
-            
-            
-            
-        ?>
+            ?>
 
-    </form>
+        </form>
+    </div>
 </body>
 </html>

@@ -5,8 +5,8 @@
     session_start();
 
     if(isset($_SESSION['username'])){
-        echo "<a href='logout.php'>
-        <input type=button value=logout name=logout></a>";
+        echo "<div class='container'><a href='logout.php'>
+        <input type=button value=logout name=logout></a></div>";
     }else{
         if($_POST['username']==$username && $_POST['password']==$password){
             $_SESSION['username']=$username;
@@ -23,8 +23,15 @@
 <head>
     <meta charset="utf-8" />
     <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome Home</h1>
+        </div>
+    </div>
+    <div class="container">
     <?php
         $time = date("h");
         $ampm = date("sa");
@@ -42,7 +49,7 @@
             }
         }
     ?>
-    <p>Welcome Home</p>
+    </div>
     
 </body>
 </html>
